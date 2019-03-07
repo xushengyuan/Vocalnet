@@ -2,33 +2,28 @@
 
 基于Wavenet与Waveglow的中文歌声合成系统
 
+## Webdemo
+http://39.98.177.168/
 ## 安装
-
-### 使用Docker（推荐）
-
 
 ### 使用源码
    1. 从Github下载代码
-
-    ```
-        git clone https://github.com/xushengyuan/Vocalnet.git
-    ```
-
+```
+git clone https://github.com/xushengyuan/Vocalnet.git
+```
    2. 安装相关依赖包
-
-    ```
-        pip install -r requirements.txt
-    ```
-
+```
+pip install -r requirements.txt
+```
    3. 从Github的release中下载预训练模型，保存到项目根目录。大陆用户可使用多线程下载工具（如`aria`）提高下载速度及稳定性。
 
 ## 生成
 程序接收由Vocalloid编辑器保存的`.vsqx`工程文件，仅读取第一条轨道中的音符。
 
 ### 一键合成
-    ```
-    python Vocalnet_synthesis.py in.vsqx
-    ```
+```
+python Vocalnet_synthesis.py in.vsqx
+```
 ### 分布合成
    1. 在vsqx中保存工程到根目录，执行`vsqx2npy.py`将`.vsqx`解析
       
